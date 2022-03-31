@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a scuffed frontend built for my other node-auth repo that serves as the backend
+This project is just an exercise in making my own login and auth system and be able to use it for basic user creation and profile editing
+Still don't really get how proxies work :/
+
+## Pages
+1. Default or /
+From this page, you can access login, signup and users
+2. Registration
+Has 4 input fields to fill out, upon submit, requesthandler is run that sends a post request to backend, and then routes to profile page
+5. Login
+Has 2 input fields to fill out, upon submit, requesthandler is run that sends a post request to backend, and then routes to profile page
+7. Profile
+Cookies are gotten through proxy and set in browser, and sent during SSR of page to get profile data
+9. Users Page
+Static generation is used to generate paths and pages. Go to /users/userid to view a user's profile
+11. User Page
+Uses staticprops to generate user cards with name and picture, then displays on this page
+
+## Technologies used:
+Nextjs (SSR and static generation)
+httpproxymiddleware
+Fetch
 
 ## Getting Started
+1. Download node-auth as well
+2. Install packages for both
+3. cd to api on node-auth
+4. npm run dev on both
+5. This project should be on port 3000, while the other should be on port 5000\
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
